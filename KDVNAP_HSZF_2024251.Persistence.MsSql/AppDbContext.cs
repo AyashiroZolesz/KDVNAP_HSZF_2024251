@@ -16,8 +16,6 @@ namespace KDVNAP_HSZF_2024251.Persistence.MsSql
         // Define Conenctions
         protected override void OnModelCreating(ModelBuilder modelBuilder) 
         {
-            base.OnModelCreating(modelBuilder);
-
             modelBuilder.Entity<Department>()
                 .HasOne(d => d.Factory)
                 .WithMany(f => f.Departments)
@@ -26,6 +24,9 @@ namespace KDVNAP_HSZF_2024251.Persistence.MsSql
             modelBuilder.Entity<Employee>() // N -> M connection, Many to many
                 .HasMany(e => e.Departments)
                 .WithMany(d => d.Employees);
+
+            base.OnModelCreating(modelBuilder);
+
         }
     }
 }
