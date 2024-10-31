@@ -24,7 +24,7 @@ namespace KDVNAP_HSZF_2024251.Application
                 {
                     throw new ArgumentException("A property in the object is null, therefore it cannot be added to the database.");
                 }
-                // If it's null (new department property), cannot be added.
+                // If it's null (new employee property), cannot be added.
                 else if (employee.Id < 0)
                 {
                     throw new ArgumentOutOfRangeException(nameof(employee.Id));
