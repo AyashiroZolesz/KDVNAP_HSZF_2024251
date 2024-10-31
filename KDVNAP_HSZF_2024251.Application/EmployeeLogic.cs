@@ -94,7 +94,7 @@ namespace KDVNAP_HSZF_2024251.Application
                 {
                     throw new ArgumentException("A property in the object is null, therefore it cannot be updated to the database.");
                 }
-                // If it's null (new department property), cannot be updated.
+                // If it's null (new employee property), cannot be updated.
                 else
                 {
                     repository.Update(employee);
