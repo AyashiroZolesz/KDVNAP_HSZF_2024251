@@ -25,6 +25,8 @@ namespace KDVNAP_HSZF_2024251.Console
             {
                 context.Database.Migrate(); // Uses the migrations on the database
             }
+
+            var asd = ".asd";
         }
     }
 }
