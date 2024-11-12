@@ -25,7 +25,7 @@ namespace KDVNAP_HSZF_2024251.Persistence.MsSql
             base.OnConfiguring(optionsBuilder);
         }
 
-        // Define Conenctions
+        // Define Conenctions + JSON In
         protected override void OnModelCreating(ModelBuilder modelBuilder) 
         {
             modelBuilder.Entity<Department>()
@@ -36,6 +36,7 @@ namespace KDVNAP_HSZF_2024251.Persistence.MsSql
             modelBuilder.Entity<Employee>() // N -> M connection, Many to many
                 .HasMany(e => e.Departments)
                 .WithMany(d => d.Employees);
+                
 
             base.OnModelCreating(modelBuilder);
 
